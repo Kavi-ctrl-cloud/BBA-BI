@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BBA Business Insights – The New College</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0ecf8, #f9f9f9);
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, #007BFF, #00bcd4);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .card-body {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-title {
+      font-size: 1.3rem;
+      color: #007BFF;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 12px;
+    }
+
+    .team-name {
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 10px 0 6px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: #444;
+      margin: 5px 0 10px;
+    }
+
+    .coordinator {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .view-btn {
+      margin-top: auto;
+      background: #007BFF;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .view-btn:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f0f0f0;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      .card img {
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BBA Department – The New College</h1>
+    <p>Business Insights Presented by Final Year Students</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Cool Drinks -->
+    <div class="card">
+      <img src="cdrinks.jpg" alt="Cool Drinks Insight">
+      <div class="card-body">
+        <div class="card-title">Business Insights of regional soft drinks</div>
+        <div class="description">An in-depth market study of consumer behavior, pricing strategies, and regional trends in the soft drinks industry.</div>
+        <div class="team-name">Team 1 – BBA TNC</div>
+        <ul>
+          <li>Kaviyarasu</li>
+          <li>Suhel</li>
+          <li>Mohammed shaffik J</li>
+          <li>Insamul Huk</li>
+          <li>Mohammed Afsal</li>
+          <li>Mohammed Sabil</li>
+          <li>Mohammed Thoufiq</li>
+          <li>Mohammed farhan</li>
+          <li>Mohammed fahim</li>
+        </ul>
+        <div class="coordinator"> Guided by: Prof R. Sivakumar </div>
+        <a class="view-btn" href="cooldrinksinsights.pdf" target="_blank">📄 View PDF</a>
+      </div>
+    </div>
+
+    <!-- Solar Panel -->
+    <div class="card">
+      <img src="spanel.jpg" alt="Solar Panel Insight">
+      <div class="card-body">
+        <div class="card-title">Solar Panel Business Insight</div>
+        <div class="description">This study explores the feasibility and market adoption of solar panel solutions for small businesses and residential users.</div>
+        <div class="team-name">Team 2 – BBA TNC</div>
+        <ul>
+          <li>Mohammed Saif</li>
+          <li>Mohammed Samuilla</li>
+          <li>Mohammed Farooq</li>
+          <li>Syed Mohammed Fazil</li>
+          <li>Syed Yousuf</li>
+          <li>Saqib</li>
+        </ul>
+        <div class="coordinator">Guided by: Prof R. Sivakumar</div>
+        <a class="view-btn" href="solarpanelinsights.pdf" target="_blank">📄 View PDF</a>
+      </div>
+    </div>
+
+    <!-- Shawarma -->
+    <div class="card">
+      <img src="images/shawarma-preview.jpg" alt="Shawarma Business Insight">
+      <div class="card-body">
+        <div class="card-title">Shawarma Stall Business Plan</div>
+        <div class="description">A complete business plan including startup costs, pricing, competition analysis, and break-even projections for a local shawarma stall.</div>
+        <div class="team-name">Team C – BBA Final Year</div>
+        <ul>
+          <li>Sara A</li>
+          <li>Dinesh R</li>
+          <li>Akash M</li>
+          <li>Kaviya S</li>
+          <li>Mohammed A</li>
+          <li>Rekha V</li>
+          <li>Surya K</li>
+          <li>Anjali T</li>
+          <li>Vinod P</li>
+          <li>Fathima B</li>
+        </ul>
+        <div class="coordinator">Faculty Coordinator: Dr. Muneer Shaikh</div>
+        <a class="view-btn" href="pdfs/shawarma.pdf" target="_blank">📄 View PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 BBA Department, The New College. All rights reserved.
+  </footer>
+
+</body>
+</html>
