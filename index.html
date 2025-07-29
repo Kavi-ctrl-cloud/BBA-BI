@@ -227,7 +227,7 @@
           <li></li>
           <li></li>
         </ul>
-        <div class="coordinator">Faculty Coordinator: Dr. Muneer Shaikh</div>
+        <div class="coordinator">Guided by: Prof R Sivakumar</div>
         <a class="view-btn" href="pdfs/shawarma.pdf" target="_blank">📄 View PDF</a>
       </div>
     </div>
@@ -239,17 +239,33 @@
   </footer>
 
   <script>
-    function filterProjects() {
-      const input = document.getElementById("searchInput");
-      const filter = input.value.toLowerCase();
-      const cards = document.querySelectorAll("#projectContainer .card");
+  function filterInsights() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = Array.from(document.getElementsByClassName('card'));
+    const container = document.getElementById('insightContainer');
 
-      cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
-        card.style.display = text.includes(filter) ? "flex" : "none";
-      });
-    }
-  </script>
+    const scoredCards = cards.map(card => {
+      const text = card.innerText.toLowerCase();
+      const score = text.includes(input) ? 1 : 0;
+      return { card, score };
+    });
+
+    // Sort so matched cards (score 1) come first
+    scoredCards.sort((a, b) => b.score - a.score);
+
+    // Rebuild the container with sorted cards
+    container.innerHTML = '';
+    scoredCards.forEach(({ card, score }) => {
+      if (score > 0 || input === '') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+      container.appendChild(card);
+    });
+  }
+</script>
+
 
 </body>
 </html>
