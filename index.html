@@ -30,6 +30,20 @@
       font-size: 1.1em;
       letter-spacing: 0.5px;
     }
+    .search-container {
+      text-align: center;
+      margin: 30px 20px 10px;
+    }
+
+    #searchInput {
+      width: 90%;
+      max-width: 400px;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+    }
 
     .container {
       max-width: 1200px;
@@ -142,8 +156,12 @@
 
   <header>
     <h1>BBA Department – The New College</h1>
-    <p>Business Insights Presented by Final Year Students</p>
+    <p>Business Insights Presented by Business Administration Students</p>
   </header>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" onkeyup="filterProjects()" placeholder="Search by project, team, student, or faculty..." />
+  </div>
 
   <div class="container">
 
@@ -196,18 +214,18 @@
       <div class="card-body">
         <div class="card-title">Shawarma Stall Business Plan</div>
         <div class="description">A complete business plan including startup costs, pricing, competition analysis, and break-even projections for a local shawarma stall.</div>
-        <div class="team-name">Team C – BBA Final Year</div>
+        <div class="team-name">Team 3 – BBA TNC</div>
         <ul>
-          <li>Sara A</li>
-          <li>Dinesh R</li>
-          <li>Akash M</li>
-          <li>Kaviya S</li>
-          <li>Mohammed A</li>
-          <li>Rekha V</li>
-          <li>Surya K</li>
-          <li>Anjali T</li>
-          <li>Vinod P</li>
-          <li>Fathima B</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
         <div class="coordinator">Faculty Coordinator: Dr. Muneer Shaikh</div>
         <a class="view-btn" href="pdfs/shawarma.pdf" target="_blank">📄 View PDF</a>
@@ -219,6 +237,19 @@
   <footer>
     © 2025 BBA Department, The New College. All rights reserved.
   </footer>
+
+  <script>
+    function filterProjects() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toLowerCase();
+      const cards = document.querySelectorAll("#projectContainer .card");
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(filter) ? "flex" : "none";
+      });
+    }
+  </script>
 
 </body>
 </html>
